@@ -1,4 +1,4 @@
-# Laravel Project Setup Guide
+# Larave Project Setup Guide
 
 ## Requirements
 
@@ -9,56 +9,46 @@ Before starting, ensure that you have the following installed on your system:
 - **Node.js** (with NPM, for frontend asset management)
 - **XAMPP / MAMP** (or any local server environment)
 
-## Step 1: Install Laravel
-
-1. **Clone the Repository
+### 1.  Clone the Repository
 
 Start by cloning this repository to your local machine:
 
-```bash
-git clone https://github.com/AomSirawit/WorksTracker.git
-cd your-repository-name
-   
-2. **Navigate to the directory where you want to install the project** and run the following command to create a new Laravel project:
-   ```bash
-   composer create-project --prefer-dist laravel/laravel my-laravel-app
-    
-3. **Install PHP Dependencies
-    ``bash
-    composer install
+    git clone https://github.com/AomSirawit/WorksTracker.git 
+    cd your-repository-name
+### 2.  Install PHP Dependencies
 
-4. **Set Up Environment Configuration
-    Copy the .env.example file to .env:
+      composer install
+### 3.  Set Up Environment Configuration
+ Copy the .env.example file to .env:
+ Update the .env file with your database connection details:
 
-    then
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=your_port
+        DB_DATABASE=your_database_name
+        DB_USERNAME=your_database_user
+        DB_PASSWORD=your_database_password
 
-    Update the .env file with your database connection details:
+then :
 
-    ``bash
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=your_port
-    DB_DATABASE=your_database_name
-    DB_USERNAME=your_database_user
-    DB_PASSWORD=your_database_password
+```php
+ php artisan key:generate
+```
+### 4.  Install Node Dependencies
 
-    then
+```javascript
+  npm install
+```
+### 5.  Start the Development Server
 
-    ``bash 
-    php artisan key:generate
+```javascript
+ npm run dev
+```
+then:
 
-5. **Install Node Dependencies
+```php
+ php artisan serve
+```
 
-    ``bash
-    npm install
+#Enjoy
 
-6. **Start the Development Server
-
-    ``bash
-    npm run dev
-
-    ``bash
-    php artisan serve
-
-
-    ##Enjoy
